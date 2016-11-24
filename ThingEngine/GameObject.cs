@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ThingGame
+namespace ThingEngine
 {
     public class GameObject
     {
         float x;
         float y;
 
-        public void Draw()
+        public virtual void Draw()
         {
 
         }
