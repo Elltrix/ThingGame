@@ -14,6 +14,7 @@ namespace ThingGame
     class Program
     {
         private static GameWindow _window;
+        private static GameWorld _world = new GameWorld();
 
         static void Main(string[] args)
         {
@@ -32,6 +33,12 @@ namespace ThingGame
             Matrix4 modelview = Matrix4.LookAt(Vector3.Zero, Vector3.UnitZ, Vector3.UnitY);
             GL.MatrixMode(MatrixMode.Modelview);
             GL.LoadMatrix(ref modelview);
+
+            foreach (var item in _world.Scene)
+            {
+                item.Draw();
+
+            }
 
             GL.Begin(PrimitiveType.Triangles);
 
