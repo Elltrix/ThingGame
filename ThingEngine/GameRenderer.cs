@@ -35,8 +35,12 @@ namespace ThingEngine
 
             foreach (var item in world.Scene)
             {
+                // Save current matrix (save state)
+                GL.PushMatrix();
+
                 item.Draw();
 
+                GL.PopMatrix();
             }
 
             window.SwapBuffers();
