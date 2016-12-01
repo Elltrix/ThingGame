@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContentPipe.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="GameInput.cs" />
     <Compile Include="GameObject.cs" />
@@ -67,6 +68,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Content\Dark-Wood-Texture.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\Grass.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

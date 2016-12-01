@@ -23,6 +23,8 @@ namespace ThingEngine
 
             window.Resize += ResizeWindow;
             window.RenderFrame += RenderFrame;
+
+            GL.Enable(EnableCap.Texture2D);
         }
 
         private Vector3 camera = Vector3.Zero;

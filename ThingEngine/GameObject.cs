@@ -14,7 +14,7 @@ namespace ThingEngine
         public GameObject(float x, float y)
         {
             X = x;
-            Y = Y;
+            Y = y;
         }
 
 
