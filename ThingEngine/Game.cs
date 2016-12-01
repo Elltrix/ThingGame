@@ -16,11 +16,13 @@ namespace ThingEngine
         protected GameWindow Window { get; private set; }
         protected GameWorld World { get; private set; }
         public GameRenderer Renderer { get; private set; }
+        internal GameInput Input { get; private set; }
 
         public virtual void Setup()
         {
             Window = new GameWindow();
             World = new GameWorld();
+            Input = new GameInput(Window);
             Renderer = new GameRenderer(Window, World);            
         }
     }
