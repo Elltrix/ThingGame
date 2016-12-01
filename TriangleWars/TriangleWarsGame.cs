@@ -15,9 +15,10 @@ namespace TriangleWars
         {
             base.Setup();
 
-            this.World.Scene.Add(new Triangle(-1,0));
-            this.World.Scene.Add(new Triangle(1, 0));
-            this.World.Scene.Add(new Triangle(-2, 0));
+            //this.World.Scene.Add(new Triangle(-1,0));
+            //this.World.Scene.Add(new Triangle(1, 0));
+            //this.World.Scene.Add(new Triangle(-2, 0));
+            this.World.Scene.Add(new Sprite(0, 0));
 
 
         }
