@@ -20,7 +20,7 @@ namespace TriangleWars
             //this.World.Scene.Add(new Triangle(-2, 0));
             //this.World.Scene.Add(new Sprite(0, 0, "Dark-Wood-Texture.jpg"));
             //this.World.Scene.Add(new Sprite(2.0f, 2.0f, "Grass.jpg"));
-            this.World.Scene.Add(new Sprite(0.0f, 0.0f, "runesurprised.png"));
+            this.World.Scene.Add(new Sprite(0.0f, 0.0f, "runesurprised.png", 0.8f));
 
 
         }

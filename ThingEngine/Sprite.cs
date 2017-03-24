@@ -12,11 +12,13 @@ namespace ThingEngine
     public class Sprite : GameObject
     {
 
-        int texture;
+        private readonly int _texture;
+        private readonly float _scale;
 
-        public Sprite(float x, float y, string texturePath) : base(x, y)
+        public Sprite(float x, float y, string texturePath, float scale = 1) : base(x, y)
         {
-            texture = ContentPipe.LoadTextures(texturePath);
+            _texture = ContentPipe.LoadTextures(texturePath);
+            _scale = scale;
         }
 
         public override void Draw()
@@ -24,7 +26,9 @@ namespace ThingEngine
 
             // Modify current matrix
             GL.Translate(X, Y, 4);
-            GL.BindTexture(TextureTarget.Texture2D, texture);
+            GL.Scale(_scale, _scale, _scale);
+
+            GL.BindTexture(TextureTarget.Texture2D, _texture);
 
             GL.Begin(PrimitiveType.Quads);
 
