@@ -21,6 +21,7 @@ namespace ThingEngine
         public virtual void Setup()
         {
             Window = new GameWindow();
+            Window.Location = new System.Drawing.Point(100, 100);
             World = new GameWorld();
             Input = new GameInput(Window);
             Renderer = new GameRenderer(Window, World);            
