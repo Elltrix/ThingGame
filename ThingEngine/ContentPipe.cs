@@ -14,11 +14,11 @@ namespace ThingEngine
 {
     class ContentPipe
     {
-        public static int LoadTextures(string path)
+        public static int? LoadTextures(string path)
         {
             if (!File.Exists("Content/" + path))
             {
-                throw new FileNotFoundException("File not found at 'Content/" + path + "'");
+                return null;
             }
 
             // Generate new texture ID and open the space for it

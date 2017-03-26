@@ -12,7 +12,7 @@ namespace ThingEngine
     public class Sprite : GameObject
     {
 
-        private readonly int _texture;
+        private readonly int? _texture;
         private readonly float _scale;
 
         public Sprite(float x, float y, string texturePath, float scale = 1) : base(x, y)
@@ -28,7 +28,8 @@ namespace ThingEngine
             GL.Translate(X, Y, 4);
             GL.Scale(_scale, _scale, _scale);
 
-            GL.BindTexture(TextureTarget.Texture2D, _texture);
+            if (_texture.HasValue)
+                GL.BindTexture(TextureTarget.Texture2D, _texture.Value);
 
             GL.Begin(PrimitiveType.Quads);
 
