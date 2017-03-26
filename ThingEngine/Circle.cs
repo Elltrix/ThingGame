@@ -38,7 +38,7 @@ namespace ThingEngine
                 double xcos = Math.Cos(degInRad);
                 double ycos = Math.Sin(degInRad);
                 GL.Vertex3(xcos * _scale, ycos * _scale, 0.0f);
-                GL.TexCoord2(xcos * 0.5 + 0.5, ycos * 0.5 + 0.5);
+                GL.TexCoord2(-xcos * 0.5 + 0.5, -ycos * 0.5 + 0.5);
             }
 
             GL.End();
