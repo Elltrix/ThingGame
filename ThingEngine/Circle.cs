@@ -22,6 +22,8 @@ namespace ThingEngine
 
         public override void Draw()
         {
+            GL.Enable(EnableCap.Blend);
+            GL.BlendFunc(BlendingFactorSrc.SrcAlpha, BlendingFactorDest.OneMinusSrcAlpha);
 
             // Modify current matrix
             GL.Translate(X, Y, 4);
