@@ -22,6 +22,8 @@ namespace TriangleWars
             //this.World.Scene.Add(new Sprite(2.0f, 2.0f, "Grass.jpg"));
             //this.World.Scene.Add(new Sprite(0.0f, 0.0f, "runesurprised.png", 0.8f));
             this.World.Scene.Add(new Circle(0f, 0f, "planet1.png", 1));
+            this.World.Scene.Add(new Circle(1.5f, 1.5f, "planet2.png", 1));
+            this.World.Scene.Add(new Circle(-1.5f, -1.5f, "planet1.png", 1));
 
 
         }
