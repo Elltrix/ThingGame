@@ -27,16 +27,20 @@ namespace ThingEngine
             GL.Translate(X, Y, 4);
             //GL.Scale(_scale, _scale, _scale);
 
-            //GL.BindTexture(TextureTarget.Texture2D, _texture);
+            if (_texture.HasValue)
+                GL.BindTexture(TextureTarget.Texture2D, _texture.Value);
 
-            GL.Begin(PrimitiveType.LineLoop);
+            GL.Begin(PrimitiveType.TriangleFan);
 
             for (int i = 0; i < 360; i++)
             {
                 float degInRad = i * DEG2RAD;
-                GL.Vertex3(Math.Cos(degInRad) * _scale, Math.Sin(degInRad) * _scale, 0.0f);
+                double xcos = Math.Cos(degInRad);
+                double ycos = Math.Sin(degInRad);
+                GL.Vertex3(xcos * _scale, ycos * _scale, 0.0f);
+                GL.TexCoord2(xcos * 0.5 + 0.5, ycos * 0.5 + 0.5);
             }
-            
+
             GL.End();
         }
     }
